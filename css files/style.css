@@ -382,6 +382,19 @@ a:hover {
 .about__intro--txt--vision li {
   color: var(--secondary-color);
 }
+.about__intro--mission,
+.about__intro--txt--vision,
+.about__intro--txt--values {
+  transition: all 0.4s ease;
+}
+
+.about__intro--mission:hover,
+.about__intro--txt--vision:hover,
+.about__intro--txt--values:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(30, 58, 138, 0.12);
+}
+
 .about__intro--txt {
   display: flex;
   flex-direction: column;
@@ -401,7 +414,9 @@ a:hover {
   border-radius: 12px;
   padding: 15px;
 }
+
 /*members*/
+
 .about__members {
   min-height: 1100px;
   display: flex;
@@ -494,12 +509,14 @@ a:hover {
   border: 1px solid #ffffff;
   padding: 10px;
   border-radius: 15px;
+  transition: all 0.3s ease;
 }
 .about__offer__links a:last-child {
   color: #ffffff;
   padding: 10px;
   border: 1px solid #ffffff;
   border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
 /*projects*/
@@ -622,6 +639,166 @@ a:hover {
   color: white;
 }
 
+/*involved*/
+.involved__hero {
+  max-width: 1200px;
+  background:
+    linear-gradient(rgba(30, 58, 138, 0.45), rgba(30, 58, 138, 0.6)),
+    url("../imgs/together.png") center/cover no-repeat;
+  color: white;
+  padding: 120px 40px 80px;
+  border-radius: 16px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+.involved__hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.involved__hero p {
+  max-width: 700px;
+  color: black;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+.involved__investment {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin: auto;
+}
+.involved__investment h2 {
+  display: flex;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: var(--primary-color);
+}
+
+.involved__investment p {
+  font-size: 1.1rem;
+  max-width: 800px;
+}
+.involved__roles {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+.join-team {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+  margin: 80px 0;
+}
+
+.join-header h2 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.involved__roles {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.roles-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.role-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.role-card:hover {
+  transform: translateY(-5px);
+  background: var(--tetriary);
+  font-weight: bold;
+}
+
+.description-card p {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+/* Form */
+.application-form {
+  background: #f8fafc;
+  padding: 40px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.application-form:hover {
+  transform: translateY(-8px);
+  background-color: rgba(8, 39, 126, 0.162);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.submit-btn {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 28px;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background: #2e4a9e;
+  transform: translate(10px, 10px);
+}
+
 /*media*/
 @media (max-width: 960px) {
   header {
@@ -742,5 +919,32 @@ a:hover {
   }
   article p {
     max-width: 400px;
+  }
+  .involved__investment {
+    align-items: center;
+    text-align: center;
+  }
+
+  .involved__investment h2 {
+    font-size: 2.1rem;
+  }
+
+  .involved__roles {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .hero {
+    padding: 80px 20px;
+  }
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  .involved__roles {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .join-team {
+    padding: 50px 30px;
   }
 }
