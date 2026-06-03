@@ -31,22 +31,22 @@
     <!--header-->
 
     <header>
-      <div class="burger">
+      <div class="burger" id="burger">
         <div></div>
         <div></div>
         <div></div>
-        <nav class="header__nav dropdown">
-          <a href="./index.html">მთავარი</a>
-          <a href="./projects.html">პროექტები</a
-          ><a href="./involved.html">ჩართულობა</a>
-          <a href="./aboutus.html">ჩვენს შესახებ</a>
-        </nav>
       </div>
       <h1>Step forward</h1>
       <nav class="header__nav">
         <a href="./index.html">მთავარი</a>
-        <a href="./projects.html">პროექტები</a
-        ><a href="./involved.html">ჩართულობა</a>
+        <a href="./projects.html">პროექტები</a>
+        <a href="./involved.html">ჩართულობა</a>
+        <a href="./aboutus.html">ჩვენს შესახებ</a>
+      </nav>
+      <nav class="header__nav dropdown" id="mobileMenu">
+        <a href="./index.html">მთავარი</a>
+        <a href="./projects.html">პროექტები</a>
+        <a href="./involved.html">ჩართულობა</a>
         <a href="./aboutus.html">ჩვენს შესახებ</a>
       </nav>
       <div class="hidden"></div>
@@ -66,5 +66,17 @@
       </nav>
       <p>© 2023 Step Forward NGO. Empowering through action.</p>
     </footer>
+    <script>
+      const burger = document.getElementById("burger");
+      const menu = document.getElementById("mobileMenu");
+
+      burger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => menu.classList.remove("open"));
+      });
+    </script>
   </body>
 </html>

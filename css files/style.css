@@ -65,14 +65,31 @@ header {
 .dropdown {
   display: none;
   position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
   background-color: #ffffff;
   padding: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   gap: 16px;
   border-top: 1px solid #e2e8f0;
 }
-.burger:hover .dropdown {
-  display: block;
+.header__nav.dropdown {
+  display: none;
+}
+
+.header__nav.dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+.header__nav.dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown.open {
+  display: flex;
+  flex-direction: column;
 }
 h1 {
   font-size: 18px;
